@@ -12,6 +12,7 @@ const Router = () =>{
 return (
   <>
     <BarNav />
+    <Pilule/>
     {/* <Switch>
       <Route exact path="/" component={Accueil} />
       <Route path="/Order" component={Order} />
