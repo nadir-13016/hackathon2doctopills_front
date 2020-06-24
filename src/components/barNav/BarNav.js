@@ -7,7 +7,8 @@ const BarNav = () =>{
     return(
         <>
    
-<nav role="navigation">
+
+      
   <div id="menuToggle">
   
     <input type="checkbox" />
@@ -18,13 +19,13 @@ const BarNav = () =>{
     
     <ul id="menu">
       <li><Link to="/" >Home</Link></li>
-      <li><Link to="/order">Order</Link></li>
+      <li><Link to="/FormOrder">Order</Link></li>
       <li><Link to="/pillbox" >Pillbox</Link></li>
       <li><Link to="/patient-information" >Patient information</Link></li>
       <li><Link to="/appointment" >Appointment</Link></li>
     </ul>
   </div>
-</nav>
+
         </>
 
     )
