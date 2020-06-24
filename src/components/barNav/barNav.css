@@ -19,12 +19,33 @@
    font-family: "Avenir Next", "Avenir", sans-serif;
  }
  
+
+.title_doctopills{
+  z-index:-2 ;
+  margin: auto;
+  margin-bottom: 0;
+  font-size: 40px;
+  left:100px;
+  text-align: center;
+  bottom: 0;
+  width: 50%;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  color:#0596de;
+}
+
+.barNav{
+  width: 10%;
+  display: block;
+  z-index: 1;
+ 
+}
  #menuToggle
  {
    display: block;
    position: relative;
-   top: 50px;
+   width: 10%;
    left: 50px;
+   top:-32px;
    
    z-index: 1;
    
@@ -135,7 +156,7 @@
    margin: -100px 0 0 -50px;
    padding: 50px;
    padding-top: 125px;
-   height: 100vh;
+   height: 95vh;
    background: #ededed;
    list-style-type: none;
    -webkit-font-smoothing: antialiased;
@@ -159,4 +180,42 @@
  #menuToggle input:checked ~ ul
  {
    transform: none;
+ }
+
+ @media screen and (max-width: 500px){
+
+  .title_doctopills{
+    z-index:-2 ;
+    margin: auto;
+    margin-bottom: 0;
+    font-size: 20px;
+    left:100px;
+    text-align: center;
+    bottom: 0;
+    width: 50%;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    color:#0596de;
+    margin-top: 20px;
+  }
+  
+  .barNav{
+    display: block;
+    z-index: 1;
+   
+  }
+   #menuToggle
+   {
+     display: block;
+     position: relative;
+     width: 10%;
+     left: 25px;
+     top:-25px;
+     
+     z-index: 1;
+     
+     -webkit-user-select: none;
+     user-select: none;
+   }
+
+
  }
