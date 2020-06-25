@@ -16,13 +16,13 @@ table{
     margin:auto;
     border-radius: 5px;
 } */
-.container{
+.containerPillBox{
     background-color:#0596de ;
     opacity: 0.7;
     border-radius: 10px 10px 0 0;
 }
 
-.container2 {
+.containerPillBox2 {
     background-color:rgb(255, 126, 0);
     opacity: 1;
     border-radius: 10px 10px 0 0;
@@ -40,6 +40,7 @@ table{
     width: 70%;
     border: 1px solid black;
     border-radius: 10px;
+    box-shadow:12px 12px 2px 1px rgba(0, 0, 255, .2); ;
     
 }
 
@@ -55,6 +56,7 @@ table{
     border-right: 1px solid black;
     width: 100%;
     text-align: center;
+   
 }
 .morning4{
     border-top: 1px solid black;
@@ -67,3 +69,43 @@ table{
     flex-direction: row;
   
 }
+.imagePills{
+    animation: imagePills infinite 3s alternate 1s  ;
+    pointer-events: none;
+}
+
+@keyframes imagePills {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(50deg);
+    }
+  }
+  .imagePills1{
+    animation: imagePills1 infinite 1s alternate   ;
+    pointer-events: none;
+}
+
+@keyframes imagePills1 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-15deg);
+    }
+  }
+
+  .imagePills2{
+    animation: imagePills2 infinite  1s alternate 1s  ;
+    pointer-events: none;
+}
+
+@keyframes imagePills2 {
+    from {
+      transform: rotate(-0.1turn);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
