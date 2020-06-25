@@ -15,10 +15,10 @@ return (
     <BarNav />
    
     <Switch>
-      {/* <Route exact path="/" component={Accueil} /> */}
+      <Route exact path="/" component={Accueil} />
       <Route path="/order" component={FormOrder} />
       <Route path="/pillBox" component={Pilule} />
-      {/* <Route path="/InfosPatient" component={InfosPatient} /> */}
+      <Route path="/InfosPatient" component={InfosPatient} />
       <Route path="/Rdv" component={Rdv} />  
      </Switch>
      {/* <Footer/>*/}
