@@ -18,7 +18,7 @@ const BarNav = () =>{
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/FormOrder">Order</Link>
+              <Link to="/FormOrder">Form Order</Link>
             </li>
             <li>
               <Link to="/pillbox">Pillbox</Link>
@@ -30,7 +30,7 @@ const BarNav = () =>{
               <Link to="/appointment">Appointment</Link>
             </li>
             <li>
-              <Link to="/ChatBot">Chat</Link>
+              <Link to="/Order">Orders</Link>
             </li>
           </ul>
         </div>

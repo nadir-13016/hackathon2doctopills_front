@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from 'axios';
+import "./formOrder.css"
 // import {createPills} from './PillsFunctions'
 
 const FormOrder = () => {
@@ -28,12 +29,22 @@ console.log(pills)
       <div className="container">
         <div className="row">
           <div className="col-md-6 mt-5 mx-auto">
-            <form noValidate onSubmit={queryPills}>
-              <h1 className="h3 mb-3 font-weight-normal">
-                Please enter the pills' infos
+            <form onSubmit={queryPills}>
+              <div className="formulaire">
+                <h1 className="h4 mb-3 font-weight-normal">
+                Order send by your Doctor
               </h1>
-
-              <div class="col-7">
+                <Link to="/Order">
+                  <button
+                    type="submit"
+                    className="btn btn-lg btn-outline-info"
+                  >
+                    YOUR ORDERS
+              </button></Link>
+              <p></p>
+                <h1 className="h4 mb-3 font-weight-normal">Or enter your order manually here</h1>
+              <div className="input">
+              <div class="col">
                 <label></label>
                 <input
                   type="text"
@@ -42,7 +53,7 @@ console.log(pills)
                   value={pills.pills_name}
                   onChange={(e) => setPills({...pills, pills_name:e.target.value})}
                 />
-              </div>
+                  </div></div>
 
               <div class="col">
                 <label></label>
@@ -65,6 +76,7 @@ console.log(pills)
                   onChange={(e) => setPills({ ...pills, pills_quantity: e.target.value })}
                 />
               </div>
+              
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -117,25 +129,34 @@ console.log(pills)
                   To take during night
                 </label>
               </div>
-              <div class="form-group">
+              
                 <br />
-                <label for="exampleFormControlFile1">
+                  <div >
+                  <label className="form-control-file" for="exampleFormControlFile1">
                   Share pill's picture
                 </label>
                 <input
                   type="file"
-                  class="form-control-file"
+                      class="form-control-file"
                   id="exampleFormControlFile1"
                   value={pills.pills_picture}
                   onChange={(e) => setPills({ ...pills, pills_picture: e.target.value })}
-                />
+                    />
               </div>
-              <button
+              <button 
                 type="submit"
-                className="btn btn-lg btn-primary btn-block"
+                className="btn btn-lg btn-outline-info"
               >
                 SEND
               </button>
+              <Link to ="/Pilule">
+              <button
+                    type="submit"
+                className="btn btn-lg btn-outline-info"
+              >
+                PILLS BOX
+              </button></Link>
+              </div>
             </form>
           </div>
         </div>
