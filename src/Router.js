@@ -7,6 +7,7 @@ import Pilule from './components/pilule/Pilule'
 import Rdv from './components/rdv/Rdv'
 import Footer from './components/footer/Footer'
 import BarNav from './components/barNav/BarNav'
+// import ChatBot from "./components/chatBot/ChatBot";
 
 const Router = () =>{
 return (
@@ -15,10 +16,11 @@ return (
     <Switch>
       {/* <Route exact path="/" component={Accueil} /> */}
       <Route path="/FormOrder" component={FormOrder} />
+      {/* <Route path="/ChatBot" component={ChatBot} /> */}
       {/* <Route path="/Pilule" component={Pilule} />
       <Route path="/InfosPatient" component={InfosPatient} />
       <Route path="/Rdv" component={Rdv} /> */}
-    </Switch> 
+    </Switch>
     {/* <Footer/>*/}
   </>
 );

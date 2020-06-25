@@ -10,15 +10,15 @@ const FormOrder = () => {
       pills_picture: "",
       pills_duration: "",
       pills_quantity: "",
-      pills_morning: "",
-      pills_midday: "",
-      pills_evening: "",
-      pills_night: "",
+      pills_morning: 0,
+      pills_midday: 0,
+      pills_evening: 0,
+      pills_night: 0,
     });
 
     const queryPills =(e) => {
         e.preventDefault()
-        axios.post("http://localhost:3000/api/Pills",pills)
+        axios.post("http://localhost:3000/Pills",pills)
         .then(console.log('data ajoutee'))
     }
 
@@ -30,7 +30,7 @@ console.log(pills)
           <div className="col-md-6 mt-5 mx-auto">
             <form noValidate onSubmit={queryPills}>
               <h1 className="h3 mb-3 font-weight-normal">
-                Please enter the order's info
+                Please enter the pills' infos
               </h1>
 
               <div class="col-7">
@@ -40,7 +40,7 @@ console.log(pills)
                   class="form-control"
                   placeholder="Medication name"
                   value={pills.pills_name}
-                  onChange={(e) => setPills(e.target.value)}
+                  onChange={(e) => setPills({...pills, pills_name:e.target.value})}
                 />
               </div>
 
@@ -51,7 +51,7 @@ console.log(pills)
                   class="form-control"
                   placeholder="Medication duration /days"
                   value={pills.pills_duration}
-                  onChange={(e) => setPills(e.target.value)}
+                  onChange={(e) => setPills({ ...pills, pills_duration: e.target.value })}
                 />
               </div>
 
@@ -62,7 +62,7 @@ console.log(pills)
                   class="form-control"
                   placeholder="Medication Quantity"
                   value={pills.pills_quantity}
-                  onChange={(e) => setPills(e.target.value)}
+                  onChange={(e) => setPills({ ...pills, pills_quantity: e.target.value })}
                 />
               </div>
               <div class="form-check">
@@ -72,7 +72,7 @@ console.log(pills)
                   name="morning"
                   id="pills_morning"
                   value={pills.pills_morning}
-                  onChange={(e) => setPills(e.target.value)}
+                  onChange={(e) => setPills({...pills,pills_morning:!pills.pills_morning})}
                 />
                 <label class="form-check-label" for="exampleRadios1">
                   To take on morning
@@ -85,7 +85,7 @@ console.log(pills)
                   name="midday"
                   id="pills_midday"
                   value={pills.pills_midday}
-                  onChange={(e) => setPills(e.target.value)}
+                  onChange={(e) => setPills({ ...pills, pills_midday: !pills.pills_midday })}
                 />
                 <label class="form-check-label" for="exampleRadios2">
                   To take at midday
@@ -98,7 +98,7 @@ console.log(pills)
                   name="evening"
                   id="pills_evening"
                   value={pills.pills_evening}
-                  onChange={(e) => setPills(e.target.value)}
+                  onChange={(e) => setPills({ ...pills, pills_evening: !pills.pills_evening })}
                 />
                 <label class="form-check-label" for="exampleRadios3">
                   Totake on evening
@@ -111,7 +111,7 @@ console.log(pills)
                   name="night"
                   id="pills_night"
                   value={pills.pills_night}
-                  onChange={(e) => setPills(e.target.value)}
+                  onChange={(e) => setPills({ ...pills, pills_night: !pills.pills_night })}
                 />
                 <label class="form-check-label" for="exampleRadios4">
                   To take during night
@@ -127,7 +127,7 @@ console.log(pills)
                   class="form-control-file"
                   id="exampleFormControlFile1"
                   value={pills.pills_picture}
-                  onChange={(e) => setPills(e.target.value)}
+                  onChange={(e) => setPills({ ...pills, pills_picture: e.target.value })}
                 />
               </div>
               <button
