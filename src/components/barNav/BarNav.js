@@ -21,7 +21,7 @@ const BarNav = () =>{
       <li><Link to="/" >Home</Link></li>
       <li><Link to="/order">Order</Link></li>
       <li><Link to="/pillbox" >Pillbox</Link></li>
-      <li><Link to="/patient-information" >Patient informations</Link></li>
+      <li><Link to="/InfosPatient" >Patient informations</Link></li>
       <li><Link to="/appointment" >Appointment</Link></li>
       <li><Link to="/chat">Chat</Link></li>
     </ul>
