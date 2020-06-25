@@ -14,19 +14,19 @@ function Accueil() {
              
                 <div className="fond" background-image={fond} alt="fond">
 
-                    <Link to ={{pathname: '/Pilule'}}>
+                    <Link to = '/Pilule'>
                         <div className="pillbox">
                             <img className="imgpillbox"src={pillbox} alt="pillbox"/>   
                         </div>  
                     </Link>
 
-                    <Link to ={{pathname: '/InfosPatient'}}>
+                    <Link to = '/InfosPatient'>
                         <div className="patient_info">
                             <img className="imgpatient" src={patient_info} alt="patient_info"/>    
                         </div> 
                     </Link>
 
-                    <Link to ={{pathname: '/Order'}}>
+                    <Link to = '/Order'>
                         <div className="order">
                             <img className="imgorder" src={order} alt="order"/> 
                         </div>    
@@ -36,7 +36,7 @@ function Accueil() {
                         <img className="imgchat" src={chat} alt="chat"/>
                     </div>
 
-                    <Link to ={{pathname: '/Rdv'}}>
+                    <Link to = '/Rdv'>
                         <div className="Appointment">
                             <img className="imgAppointment" src={Appointment} alt="Appointment"/>
                         </div>

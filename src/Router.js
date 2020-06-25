@@ -14,10 +14,10 @@ return (
     <BarNav />
     <Switch>
         <Route exact path="/" component={Accueil} />
-        <Route path="/Order" component={Order} />
-        <Route path="/Pilule" component={Pilule} />
+        {/* <Route path="/Order" component={Order} /> */}
+        {/* <Route path="/Pilule" component={Pilule} /> */}
         <Route path="/InfosPatient" component={InfosPatient} />
-        <Route path="/Rdv" component={Rdv} />
+        {/* <Route path="/Rdv" component={Rdv} /> */}
     </Switch> 
     {/* <Footer/> */}
   </>
