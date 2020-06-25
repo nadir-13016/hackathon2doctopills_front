@@ -14,7 +14,7 @@ function Accueil() {
              
                 <div className="fond" background-image={fond} alt="fond">
 
-                    <Link to = '/pillBox'>
+                    <Link to = 'pillBox'>
                         <div className="pillbox">
                             <img className="imgpillbox"src={pillbox} alt="pillbox"/>   
                         </div>  
