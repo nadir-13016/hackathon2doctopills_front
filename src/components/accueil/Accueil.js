@@ -13,26 +13,34 @@ function Accueil() {
     return (
              
                 <div className="fond" background-image={fond} alt="fond">
-                    
-                    <div className="pillbox">
-                        <img src={pillbox} alt="pillbox" width="30%"/>   
-                    </div>  
 
-                    <div className="patient_info">
-                        <img src={patient_info} alt="patient_info" width="30%"/>    
-                    </div> 
+                    <Link to ={{pathname: '/Pilule'}}>
+                        <div className="pillbox">
+                            <img className="imgpillbox"src={pillbox} alt="pillbox"/>   
+                        </div>  
+                    </Link>
 
-                    <div className="order">
-                        <img src={order} alt="order" width="30%"/> 
-                    </div>    
+                    <Link to ={{pathname: '/InfosPatient'}}>
+                        <div className="patient_info">
+                            <img className="imgpatient" src={patient_info} alt="patient_info"/>    
+                        </div> 
+                    </Link>
+
+                    <Link to ={{pathname: '/Order'}}>
+                        <div className="order">
+                            <img className="imgorder" src={order} alt="order"/> 
+                        </div>    
+                    </Link>
 
                     <div className="chat">
-                        <img src={chat} alt="chat" width="30%"/>
+                        <img className="imgchat" src={chat} alt="chat"/>
                     </div>
 
-                    <div className="Appointment">
-                        <img src={Appointment} alt="Appointment" width="30%"/>
-                    </div>
+                    <Link to ={{pathname: '/Rdv'}}>
+                        <div className="Appointment">
+                            <img className="imgAppointment" src={Appointment} alt="Appointment"/>
+                        </div>
+                    </Link>
                     
                 </div> 
         

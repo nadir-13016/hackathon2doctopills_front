@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import Accueil from './components/accueil/Accueil';
+import Router from './Router'
 
-function App() {
+const App = () => {
   return (
     <>
-      <Accueil/>
+      
+      <Router/>
+
     </>
   );
 }
