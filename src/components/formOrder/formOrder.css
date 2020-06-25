@@ -1,0 +1,27 @@
+.formulaire {
+    /* display: flex;
+    flex-direction: column;
+   align-items: left; */
+    width: 40vw;
+}
+
+.col {
+padding:0 !important;
+}
+ 
+.form-check {
+    margin-top: 10px !important;
+    margin-left: 30% !important;
+}
+
+.h1Form {
+    margin-left: 5% !important;
+}
+
+button {
+    margin-left: 15% !important;
+}
+
+#exampleFormControlFile1 {
+    margin-left: 15%
+}

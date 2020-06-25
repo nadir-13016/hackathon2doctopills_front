@@ -6,7 +6,7 @@ const BarNav = () =>{
 
     return(
         <>
-        <h1 className="title_doctopills">Doctopills</h1>
+        <h1 className="title_doctopills"><Link className='titreLink' style={{ textDecoration: 'none' }} to="/">Doctopills</Link></h1>
 <nav role="navigation" className="barNav">
 
   <div id="menuToggle">
@@ -20,7 +20,7 @@ const BarNav = () =>{
     <ul id="menu">
       <li><Link to="/" >Home</Link></li>
       <li><Link to="/order">Order</Link></li>
-      <li><Link to="/pillbox" >Pillbox</Link></li>
+      <li><Link to="/pillBox" >Pillbox</Link></li>
       <li><Link to="/patient-information" >Patient informations</Link></li>
       <li><Link to="/appointment" >Appointment</Link></li>
       <li><Link to="/chat">Chat</Link></li>

@@ -19,6 +19,10 @@
    font-family: "Avenir Next", "Avenir", sans-serif;
  }
  
+ .titreLink:hover{
+  text-decoration: none;
+  color:#0596de;
+ }
 
 .title_doctopills{
   z-index:-2 ;
@@ -31,6 +35,7 @@
   width: 50%;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   color:#0596de;
+  
 }
 
 .barNav{
