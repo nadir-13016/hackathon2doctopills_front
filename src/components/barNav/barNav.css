@@ -182,10 +182,11 @@
  /*
   * And let's slide it in from the left
   */
- #menuToggle input:checked ~ ul
+ #menuToggle input:checked ~ ul 
  {
    transform: none;
  }
+
 
  @media screen and (max-width: 500px){
 

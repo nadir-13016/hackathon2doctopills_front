@@ -149,7 +149,7 @@ console.log(pills)
               >
                 SEND
               </button>
-              <Link to ="/Pilule">
+              <Link to ="/pillBox">
               <button
                     type="submit"
                 className="btn btn-lg btn-outline-info"

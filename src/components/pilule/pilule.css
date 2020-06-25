@@ -56,12 +56,14 @@ table{
     border-right: 1px solid black;
     width: 100%;
     text-align: center;
+    background-image: url('./assets/boite1.png');
    
 }
 .morning4{
     border-top: 1px solid black;
     width: 100%;
     text-align: center;
+    background-image: url('./assets/boite1.png');
 }
 
 .container_day{

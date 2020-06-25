@@ -18,7 +18,7 @@ const BarNav = () =>{
     <span></span>
     
     <ul id="menu">
-      <li><Link to="/" >Home</Link></li>
+      <li><Link className='liNav' to="/" >Home</Link></li>
       <li><Link to="/order">Order</Link></li>
       <li><Link to="/pillBox" >Pillbox</Link></li>
       <li><Link to="/patient-information" >Patient informations</Link></li>
