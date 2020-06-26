@@ -32,9 +32,11 @@ function Accueil() {
                         </div>    
                     </Link>
 
+                    <Link to = '/Chat'>
                     <div className="chat">
                         <img className="imgchat" src={chat} alt="chat"/>
                     </div>
+                    </Link>
 
                     <Link to = '/Rdv'>
                         <div className="Appointment">
