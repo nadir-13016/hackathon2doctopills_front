@@ -15,13 +15,15 @@ const Router = () =>{
 return (
   <>
     <BarNav />
-   
+    
     <Switch>
       <Route exact path="/" component={Accueil} />
-      <Route path="/order" component={FormOrder} />
+      <Route path="/form-order" component={FormOrder} />
+      <Route path='/Order' component={Order}/>
       <Route path="/pillBox" component={Pilule} />
       <Route path="/InfosPatient" component={InfosPatient} />
-      <Route path="/Rdv" component={Rdv} />  
+      <Route path="/Rdv" component={Rdv} />
+      <Route path= "/landing" component={Landing}  />
      </Switch>
      {/* <Footer/>*/}
   </>

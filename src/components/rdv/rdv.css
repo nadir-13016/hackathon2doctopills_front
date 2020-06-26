@@ -1,0 +1,44 @@
+.titreFormRdv{
+    margin-top: 50px;
+    text-align: center;
+}
+
+#formRdv{
+    text-align: center;
+}
+#formRdv input{
+    width:200px ;
+}
+
+.buttonRdvPost{
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #0596de;
+    border-radius: 5px;
+    color: #0596de;
+    margin: auto;
+}
+.buttonRdvConfirmed{
+    width: 150px;
+    height: 30px;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #0596de;
+    border-radius: 5px;
+    color: #0596de;
+
+
+}
+
+
+.containerResRdv{
+    margin-top: 50px;
+   text-align: center;
+}
+
+.titreConfirmed{
+    margin-top: 20px;
+}
+

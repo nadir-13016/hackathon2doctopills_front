@@ -52,7 +52,7 @@ const Landing = () => {
               {/* <p>Mot de passe oublié</p> */}
             </div>
             <div>
-                          <Link to="./Accueil">
+                          <Link to="./">
                 <button
                     type="submit"
                     className="btn btn-lg btn-outline-info">Loggin

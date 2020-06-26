@@ -4,7 +4,9 @@ import Axios from 'axios'
 
 
 
-const Rdv = () =>{
+const Rdv = () => {
+
+const [rdvConfirmed,setRdvConfirmed] = useState(true)
 
 const [rdv,setRdv]= useState({
     rdv_date:'',
@@ -16,17 +18,34 @@ const [rdv,setRdv]= useState({
     rdv_confirmed:false
 })
 
+const [myrdv,setMyrdv] = useState ([])  
 
-const fetchData = () =>{
-    Axios.post('http://localhost:3000/rdvs',rdv)
+
+useEffect(() => {
+  fetchData()
+}, [])
+
+const fetchData = ()=>{
+  Axios.get('http://localhost:3000/rdvs')
+  .then(response => setMyrdv(response.data))
 }
-    return(
-        <>
-                <form noValidate onSubmit={fetchData}>
+
+
+const postData = (e) =>{
+  e.preventDefault()
+    Axios.post('http://localhost:3000/rdvs',rdv)
+    .then(fetchData)
+}
+
+console.log(rdvConfirmed)
+    return (
+        <>      
+                <h4 className='titreFormRdv'>Titre</h4>
+                <form noValidate id='formRdv' onSubmit={postData}>
               <div >
                 <label></label>
                 <input
-                  type="date"
+                  type="text"
                   class=""
                   value={rdv.rdv_date}
                   onChange={(e) => setRdv({...rdv, rdv_date:e.target.value})}
@@ -36,7 +55,7 @@ const fetchData = () =>{
                 <label></label>
                 <input
                   type="time"
-                  class=""
+                  class="inputTime"
                   value={rdv.rdv_heure}
                   onChange={(e) => setRdv({...rdv, rdv_heure:e.target.value})}
                 />
@@ -74,11 +93,11 @@ const fetchData = () =>{
               <div >
                 <label></label>
                 <input
-                  type="text"
+                  type="number"
                   class=""
                   placeholder=''
-                  value={rdv.rdv_adress}
-                  onChange={(e) => setRdv({...rdv,rdv_adress:e.target.value})}
+                  value={rdv.rdv_reccurence}
+                  onChange={(e) => setRdv({...rdv,rdv_reccurence:e.target.value})}
                 />
               </div>
               <div >
@@ -88,11 +107,25 @@ const fetchData = () =>{
                   class=""
                   placeholder=''
                   value={rdv.rdv_confirmed}
-                  onChange={(e) => setRdv({...rdv,rdv_confrimed:!rdv.rdv_confirmed})}
+                  onChange={(e) => setRdv({...rdv,rdv_confirmed:!rdv.rdv_confirmed})}
                 />
               </div>
+              <button className="buttonRdvPost" type='submit'>Send</button>
               </form>
+              <div className='containerResRdv'>
+              <button className='buttonRdvConfirmed' onClick={() => setRdvConfirmed(!rdvConfirmed)}>My appointment</button>
+              <h4 className='titreConfirmed'>{rdvConfirmed?'Confirmed appointment':'Unconfirmed appointment'}</h4>
+              {myrdv.filter(rdv => rdv.rdv_confirmed === rdvConfirmed).map(myrdv=> <div> <p>Adress: {myrdv.rdv_adress} </p>
+                <p>{myrdv.rdv_confirmed === true?`Date : ${myrdv.rdv_date}`:''} </p>
+                <p>Docteur: {myrdv.rdv_docteur} </p>
+                <p>{myrdv.rdv_confirmed === true?`Heure: ${myrdv.rdv_heure}`:''} </p>
+                <p>Speciality:{myrdv.rdv_speciality} </p>
+                <p>Reccurency: {myrdv.rdv_reccurence} week  </p>
+                <p>Confirmed: {myrdv.rdv_confirmed === true ? `Yes`:`No`}  </p>
+               </div>)}
+               </div>
 
+  
         </>
     )
 }
