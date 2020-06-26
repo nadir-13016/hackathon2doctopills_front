@@ -20,7 +20,7 @@ const BarNav = () =>{
     <ul id="menu">
       <li><Link className='liNav' to="/" >Home</Link></li>
       <li><Link to="/order">Order</Link></li>
-      <li><Link to="/pillbox" >Pillbox</Link></li>
+      <li><Link to="/pilule" >Pillbox</Link></li>
       <li><Link to="/InfosPatient" >Patient informations</Link></li>
       <li><Link to="/appointment" >Appointment</Link></li>
       <li><Link to="/chat">Chat</Link></li>
