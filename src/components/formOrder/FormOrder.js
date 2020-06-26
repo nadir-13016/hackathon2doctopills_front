@@ -16,7 +16,7 @@ const FormOrder = () => {
     });
     const queryPills =(e) => {
         e.preventDefault()
-        axios.post("http://localhost:3001/pills",pills)
+        axios.post("http://localhost:3000/pills",pills)
         .then(console.log('data ajoutee'))
     }
 console.log(pills)

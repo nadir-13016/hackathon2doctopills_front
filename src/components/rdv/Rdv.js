@@ -101,7 +101,7 @@ console.log(rdvConfirmed)
                 />
               </div>
               <div >
-                <label></label>
+                <label> Confirmed Appointment</label>
                 <input
                   type="checkbox"
                   class=""

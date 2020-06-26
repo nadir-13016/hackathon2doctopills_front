@@ -11,7 +11,7 @@ const Pilule = () => {
     const [pill,setPill] = useState([])
 
     const fetchPill= () =>{
-        Axios.get("http://localhost:3001/pills")
+        Axios.get("http://localhost:3000/pills")
         .then(response => setPill(response.data))
     }
 

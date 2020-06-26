@@ -28,8 +28,8 @@ return (
                                 <h5 class="card-title">Order</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">Date: {e.order_date}</h6>
                                 <p class="card-text">Doctor: {e.order_medecin}</p>
-                                <a href="{e.order_pdf}" class="card-link">PDF link</a>
-                                <a href="{e.order_qrcode}" class="card-link">QR Code link</a>
+                                <a href="https://zupimages.net/viewer.php?id=20/26/b2gg.jpg" class="card-link">PDF link</a>
+                                <a href="https://zupimages.net/viewer.php?id=20/26/36o6.png" class="card-link">QR Code link</a>
                             </div>
                         </div>
                             </li>
