@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import "./formOrder.css"
 // import {createPills} from './PillsFunctions'
-
 const FormOrder = () => {
-
     const [pills, setPills] = useState({
       pills_name: "",
       pills_picture: "",
@@ -16,33 +14,35 @@ const FormOrder = () => {
       pills_evening: 0,
       pills_night: 0,
     });
-
     const queryPills =(e) => {
         e.preventDefault()
         axios.post("http://localhost:3001/pills",pills)
         .then(console.log('data ajoutee'))
     }
-
 console.log(pills)
     return (
-
       <div className="container">
         <div className="row">
-          <div className="col-md-6 mt-5 mx-auto">
+          <div id="centrage" className="col-md-6 mt-5 mx-auto">
+            <div className="encadrement">
             <form onSubmit={queryPills}>
               <div className="formulaire">
-                <h1 className="h4 mb-3 font-weight-normal" className='h1Form'>
-                Order send by your Doctor
-              </h1>
+              <div className="firstTitle">
+                <h1 id="fontTitre" className="h4 mb-3 font-weight-normal">
+                    Order send by your Doctor
+              </h1></div>
                 <Link to="/Order">
-                  <button
+                <div className="boutonOrder1">
+                  <button id="boutonOrder"
                     type="submit"
                     className="btn btn-lg btn-outline-info"
                   >
-                    YOUR ORDERS
-              </button></Link>
+                      YOUR ORDERS
+              </button></div></Link>
               <p></p>
-                <h1 className="h4 mb-3 font-weight-normal">Or enter your order manually here</h1>
+                <div className="firstTitle">
+                  <h1 id="fontTitre" className="h4 mb-3 font-weight-normal">Or enter your order manually here</h1>
+                </div>
               <div className="input">
               <div class="col">
                 <label></label>
@@ -53,8 +53,7 @@ console.log(pills)
                   value={pills.pills_name}
                   onChange={(e) => setPills({...pills, pills_name:e.target.value})}
                 />
-                  </div></div>
-
+                </div>
               <div class="col">
                 <label></label>
                 <input
@@ -65,7 +64,6 @@ console.log(pills)
                   onChange={(e) => setPills({ ...pills, pills_duration: e.target.value })}
                 />
               </div>
-
               <div class="col">
                 <label></label>
                 <input
@@ -76,8 +74,8 @@ console.log(pills)
                   onChange={(e) => setPills({ ...pills, pills_quantity: e.target.value })}
                 />
               </div>
-              
-              <div class="form-check">
+              <div className="checkBox">
+                      <div class="form-check">
                 <input
                   class="form-check-input"
                   type="checkbox"
@@ -113,7 +111,7 @@ console.log(pills)
                   onChange={(e) => setPills({ ...pills, pills_evening: !pills.pills_evening })}
                 />
                 <label class="form-check-label" for="exampleRadios3">
-                  Totake on evening
+                  To take on evening
                 </label>
               </div>
               <div class="form-check">
@@ -129,10 +127,11 @@ console.log(pills)
                   To take during night
                 </label>
               </div>
-              
+                    </div>
+              </div>
                 <br />
-                  <div >
-                  <label className="form-control-file" for="exampleFormControlFile1">
+                  <div className="boutonShare">
+                  <label>
                   Share pill's picture
                 </label>
                 <input
@@ -142,8 +141,9 @@ console.log(pills)
                   value={pills.pills_picture}
                   onChange={(e) => setPills({ ...pills, pills_picture: e.target.value })}
                     />
-              </div>
-              <button 
+                  </div>
+              <div className="boutonBas">
+              <button
                 type="submit"
                 className="btn btn-lg btn-outline-info"
               >
@@ -154,14 +154,14 @@ console.log(pills)
                     type="submit"
                 className="btn btn-lg btn-outline-info"
               >
-                PILLS BOX
-              </button></Link>
+                      PILLS BOX
+              </button></Link></div>
               </div>
             </form>
+            </div>
           </div>
         </div>
       </div>
     );
 }
-
 export default FormOrder

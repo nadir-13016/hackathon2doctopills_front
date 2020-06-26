@@ -1,6 +1,7 @@
 .titreFormRdv{
     margin-top: 50px;
     text-align: center;
+    color: rgb(231, 77, 21);
 }
 
 #formRdv{
@@ -40,5 +41,14 @@
 
 .titreConfirmed{
     margin-top: 20px;
+    color: rgb(231, 77, 21);
 }
 
+.containerInfosRdv{
+    border: 1px solid #0596de;
+    border-radius: 15px;
+    width: 60%;
+    margin: 20px auto;
+    text-align: center;
+    background-color: rgb(235, 229, 229);
+}

@@ -1,8 +1,6 @@
-.formulaire {
-    /* display: flex;
-    flex-direction: column;
-   align-items: left; */
-    width: 40vw;
+.row {
+    width: 100%;
+    margin: 0 !important;
 }
 
 .col {
@@ -10,16 +8,68 @@ padding:0 !important;
 }
  
 .form-check {
-    margin-top: 10px !important;
-    margin-left: 30% !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
 }
 
-.h1Form {
-    margin-left: 5% !important;
+.firstTitle {
+   display: flex;
+   justify-content: center;
 }
 
+#fontTitre {
+font-size: 20px !important;
+}
 
 
 #exampleFormControlFile1 {
-    margin-left: 15%
+    margin-left: 45%
+}
+
+#boutonOrder {
+    width: 50%;
+}
+
+.boutonOrder1 {
+    display: flex;
+    justify-content: center;
+}
+.boutonBas {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.encadrement {
+    width: 130%;
+    height: 105%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #0596de;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 1px #a6d8f1;
+    margin-top: 8px;
+}
+
+#centrage {
+    display: flex;
+    justify-content: center;
+}
+
+.boutonShare {
+       display: flex;
+       flex-direction: column;
+   justify-content: center;
+    align-items: center;
+}
+
+.checkBox {
+    margin-top: 25px;
+margin-left: 30%;
+}
+
+@media screen and (max-width: 500px){
+    #exampleFormControlFile1 {
+    margin-left: 12%}
 }

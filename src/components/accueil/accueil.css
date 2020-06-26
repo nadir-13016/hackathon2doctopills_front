@@ -1,11 +1,6 @@
-#root{
-    height:100%;
-}
-html, body{
-    height:100%;
-}
+
 .fond{
-    background-image: url("./asset/fond.png");   
+    background-image: url("./asset/fond.png");
     display: flex;
     background-position: center;
     background-size: 100% 70%;
@@ -13,9 +8,7 @@ html, body{
     height: 100%;
     background-attachment: scroll;
     background-repeat: no-repeat;
-    
 }
-
 .pillbox{
     margin-top: 280px;
 }
@@ -24,155 +17,124 @@ html, body{
     width: 45%;
     box-shadow: 5px 5px 10px 1px grey;
 }
-
 .patient_info{
-    margin-top: 500px; 
+    margin-top: 500px;
 }
 .imgpatient:hover{
     border-radius: 15px;
     width: 45%;
     box-shadow: 5px 5px 10px 1px grey;
 }
-
 .order{
-    margin-top: 80px; 
+    margin-top: 80px;
 }
 .imgorder:hover{
     border-radius: 15px;
     width: 45%;
     box-shadow: 5px 5px 10px 1px grey;
 }
-
 .chat{
-    margin-top: 510px; 
+    margin-top: 510px;
 }
 .imgchat:hover{
     border-radius: 15px;
     width: 50%;
     box-shadow: 5px 5px 10px 1px grey;
 }
-
 .Appointment{
-    margin-top: 140px; 
+    margin-top: 140px;
 }
 .imgAppointment:hover{
     border-radius: 15px;
     width: 44%;
     box-shadow: 5px 5px 10px 1px grey;
 }
-
 /* image */
 .imgpillbox{
     width: 40%;
 }
-
 .imgpatient{
     width: 40%;
     margin-top: 55px;
 }
-
 .imgorder{
     width: 40%;
 }
-
 .imgchat{
     width: 45%;
-    margin-top: 80px; 
+    margin-top: 80px;
 }
-
 .imgAppointment{
     width: 40%;
 }
-
-
 @media screen and (max-width: 1400px){
-
     .pillbox{
         margin-top: 280px;
     }
-    
     .patient_info{
-        margin-top: 440px; 
+        margin-top: 440px;
     }
-    
     .order{
-        margin-top: 80px; 
+        margin-top: 80px;
     }
-    
     .chat{
-        margin-top: 430px; 
+        margin-top: 430px;
     }
-    
     .Appointment{
-        margin-top: 140px; 
+        margin-top: 140px;
     }
 }
-
-
 @media screen and (max-width: 900px){
-
     .pillbox{
         margin-top: 280px;
     }
-    
     .patient_info{
-        margin-top: 440px; 
+        margin-top: 440px;
     }
-    
     .order{
-        margin-top: 80px; 
+        margin-top: 80px;
     }
-    
     .chat{
-        margin-top: 450px; 
+        margin-top: 450px;
     }
-    
     .Appointment{
-        margin-top: 140px; 
+        margin-top: 140px;
     }
 }
-
 @media screen and (max-width: 500px){
-
     .pillbox{
         width: 250%;
         transform: rotate(-90deg);
-        margin-top: -100px;
-        margin-left: -60px;
+        margin-top: -80px;
+        margin-left: -80px;
     }
-    
-    
     .patient_info{
-        width: 230%; 
+        width: 230%;
+        transform: rotate(-90deg);
+        margin-top: -230px;
+        margin-left: -110px;
+    }
+    .order{
+        width: 210%;
+        transform: rotate(-90deg);
+        margin-top: -210px;
+        margin-left: -20px;
+    }
+    .chat{
+        width: 200%;
         transform: rotate(-90deg);
         margin-top: -200px;
-        margin-left: -60px;
+        margin-left: -30px;
     }
-    
-    .order{
-        width: 220%;
-        transform: rotate(-90deg);
-        margin-top: -190px;
-        margin-left: 50px;
-    }
-    
-    .chat{
-        width: 170%;  
-        transform: rotate(-90deg);
-        margin-top: -220px;
-        margin-left: 80px;
-    }
-    
     .Appointment{
-        width: 180%;  
+        width: 180%;
         transform: rotate(-90deg);
         margin-top: -100px;
         margin-left: -10px;
     }
-
     .fond{
         align-items: center;
-        background-image: url("./asset/fond.png");   
+        background-image: url("./asset/fond.png");
         display: flex;
         transform: rotate(90deg);
         width:130%;
@@ -180,6 +142,6 @@ html, body{
         background-repeat: no-repeat;
         margin-top: 230px;
         margin-left: -100px;
-        
     }
 }
+

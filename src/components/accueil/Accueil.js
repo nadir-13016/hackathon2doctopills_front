@@ -7,45 +7,35 @@ import patient_info from './asset/patient_info.png'
 import pillbox from './asset/pillbox.png'
 import './accueil.css'
 import { Link } from 'react-router-dom'
-
-
 function Accueil() {
     return (
-             
                 <div className="fond" background-image={fond} alt="fond">
-
                     <Link to = 'pillBox'>
                         <div className="pillbox">
-                            <img className="imgpillbox"src={pillbox} alt="pillbox"/>   
-                        </div>  
+                            <img className="imgpillbox"src={pillbox} alt="pillbox"/>
+                        </div>
                     </Link>
-
                     <Link to = '/InfosPatient'>
                         <div className="patient_info">
-                            <img className="imgpatient" src={patient_info} alt="patient_info"/>    
-                        </div> 
+                            <img className="imgpatient" src={patient_info} alt="patient_info"/>
+                        </div>
                     </Link>
-
-                    <Link to = '/Order'>
+                    <Link to = '/form-order'>
                         <div className="order">
-                            <img className="imgorder" src={order} alt="order"/> 
-                        </div>    
+                            <img className="imgorder" src={order} alt="order"/>
+                        </div>
                     </Link>
-
+                    <Link to = '/Chat'>
                     <div className="chat">
                         <img className="imgchat" src={chat} alt="chat"/>
                     </div>
-
-                    <Link to = '/Rdv'>
+                    </Link>
+                    <Link to = '/appointment'>
                         <div className="Appointment">
                             <img className="imgAppointment" src={Appointment} alt="Appointment"/>
                         </div>
                     </Link>
-                    
-                </div> 
-        
+                </div>
     )
 }
-
 export default Accueil
-

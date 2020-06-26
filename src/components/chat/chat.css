@@ -1,0 +1,8 @@
+.imgChat{
+    width: 80%; 
+}
+
+.divImgChat{
+    display: flex;
+    justify-content: center;
+}

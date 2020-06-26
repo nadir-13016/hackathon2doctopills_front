@@ -6,10 +6,10 @@ import FormOrder from './components/formOrder/FormOrder'
 import Order from './components/order/Order'
 import Pilule from './components/pilule/Pilule'
 import Rdv from './components/rdv/Rdv'
-import Footer from './components/footer/Footer'
+import Chat from './components/chat/Chat'
 import BarNav from './components/barNav/BarNav'
 import Landing from './components/Landing/Landing'
-// import ChatBot from "./components/chatBot/ChatBot";
+
 
 const Router = () =>{
 return (
@@ -22,8 +22,8 @@ return (
       <Route path='/Order' component={Order}/>
       <Route path="/pillBox" component={Pilule} />
       <Route path="/InfosPatient" component={InfosPatient} />
-      <Route path="/Rdv" component={Rdv} />
-      <Route path= "/landing" component={Landing}  />
+      <Route path="/appointment" component={Rdv} />  
+      <Route path="/Chat" component={Chat} /> 
      </Switch>
      {/* <Footer/>*/}
   </>

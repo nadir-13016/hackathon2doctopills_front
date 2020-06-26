@@ -40,7 +40,7 @@ const postData = (e) =>{
 console.log(rdvConfirmed)
     return (
         <>      
-                <h4 className='titreFormRdv'>Titre</h4>
+                <h4 className='titreFormRdv'>Appointment schedule</h4>
                 <form noValidate id='formRdv' onSubmit={postData}>
               <div >
                 <label></label>
@@ -115,7 +115,7 @@ console.log(rdvConfirmed)
               <div className='containerResRdv'>
               <button className='buttonRdvConfirmed' onClick={() => setRdvConfirmed(!rdvConfirmed)}>My appointment</button>
               <h4 className='titreConfirmed'>{rdvConfirmed?'Confirmed appointment':'Unconfirmed appointment'}</h4>
-              {myrdv.filter(rdv => rdv.rdv_confirmed === rdvConfirmed).map(myrdv=> <div> <p>Adress: {myrdv.rdv_adress} </p>
+              {myrdv.filter(rdv => rdv.rdv_confirmed === rdvConfirmed).map(myrdv=> <div className='containerInfosRdv'> <p>Adress: {myrdv.rdv_adress} </p>
                 <p>{myrdv.rdv_confirmed === true?`Date : ${myrdv.rdv_date}`:''} </p>
                 <p>Docteur: {myrdv.rdv_docteur} </p>
                 <p>{myrdv.rdv_confirmed === true?`Heure: ${myrdv.rdv_heure}`:''} </p>
