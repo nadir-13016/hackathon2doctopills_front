@@ -7,7 +7,7 @@ import Axios from 'axios'
 
 const Pilule = () => {
 
-   const [pillBox,setPillBox] = useState([])
+   const [pillBox, setPillBox] = useState([])
     const [pill,setPill] = useState([])
 
     const fetchPill= () =>{
